@@ -12,7 +12,7 @@
   .nav-menu {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
   }
   
   .nav-item a {

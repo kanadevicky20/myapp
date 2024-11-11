@@ -16,17 +16,52 @@ function Form(){
     }
 
     return(<>
-      <h1>Form</h1>
-        <div className="container">
-            <label>Name:</label>
-            <input type="text" name="name" value={data.name} onChange={handleChange}/><br/>
-            <label>Email:</label>
-            <input type="email" name="email" value={data.email} onChange={handleChange}/><br/>
-            <label>Phone:</label>
-            <input type="number" name="phone" value={data.phone} onChange={handleChange}/><br/>
-            <label>Address:</label>
-            <input type="text" name="address" value={data.address} onChange={handleChange}/><br/>
-            <button className="btn btn-primary" onClick={handleSubmit}>submit</button>
+     <h1 className="form">Form</h1>
+        <div className="form">
+        <form onSubmit={handleSubmit}>
+                <label htmlFor="name">Name:</label><br />
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={data.name}
+                    onChange={handleChange}
+                    required
+                /><br /><br />
+
+                <label htmlFor="email">Email:</label><br />
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={data.email}
+                    onChange={handleChange}
+                    required
+                /><br /><br />
+
+                <label htmlFor="phone">Phone:</label><br />
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={data.phone}
+                    onChange={handleChange}
+                    pattern="[0-9]{10}"
+                    required
+                /><br /><br />
+
+                <label htmlFor="address">Address:</label><br />
+                <textarea
+                    id="address"
+                    name="address"
+                    value={data.address}
+                    onChange={handleChange}
+                    rows="4"
+                    required
+                ></textarea><br /><br />
+
+                <button className="btn btn-primary" type="submit">Submit</button>
+            </form>
         </div>
         </>
     )
