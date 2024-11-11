@@ -1,0 +1,57 @@
+/* ComingSoon.css */
+
+/* Fullscreen overlay with translucent background */
+
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Translucent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideInFromTop 1s ease forwards;
+    z-index: 1000; /* Ensures it stays on top */
+  }
+  
+  /* Modal content with centered image */
+  .modal-content {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly translucent background */
+    padding: 0px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .modal-content img {
+    max-width: 100%; /* Responsive image size */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Keyframes for sliding effect from the top */
+  @keyframes slideInFromTop {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
